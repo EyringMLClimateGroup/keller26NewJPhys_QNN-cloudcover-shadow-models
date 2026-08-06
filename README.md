@@ -1,13 +1,10 @@
 ## Shadow models for quantum neural networks for cloud cover parametrization
 
-This repository contains the code for shadow models for quantum neural networks for cloud cover parameterization.
+This repository contains the code for shadow models for quantum neural networks for cloud cover parameterization. Shadow models are classical models, that reproduce the input-output relations of the QML model, to allow for later coupling to the earth system model to circumvent limited quantum hardware availability. 
 
+It is part of the paper "Shadow models of a quantum model for cloud cover and the influence of finite sampling noise", submitted to New Journal of Physics.
 
-It is part of the paper
-> **(TODO)**.
-
-
-The cloud cover parameterization is from Lorenzo et al. 2026 Mach. Learn.: Earth 2 015008 [10.1088/3049-4753/ae4981](https://doi.org/10.1088/3049-4753/ae4981), with corresponding code repository [10.5281/zenodo.21504569](https://doi.org/10.5281/zenodo.21504569).
+The code is based on the QML-based cloud cover-parameterization from Pastori et al. 2026 Mach. Learn.: Earth 2 015008 [10.1088/3049-4753/ae4981](https://doi.org/10.1088/3049-4753/ae4981), with corresponding code repository [10.5281/zenodo.21504569](https://doi.org/10.5281/zenodo.21504569). Used here, are the QNN's, functions for pre- and post-processing, as well as for data loading.
 
 
 
@@ -22,10 +19,6 @@ Here is the list of commands you should run in order to create the correct Pytho
 
 `pip install -r requirements.txt`
 
-`conda deactivate`
-
-`conda activate mycondaenv`
-
 `python -m ipykernel install --user --name my-kernel --display-name="My Kernel"`
 
 `conda deactivate`
@@ -39,7 +32,7 @@ The directory is structured as follows:
 - The folder '\data_hardware\output' contains the output computed by quantum hardware (Euro-Q-Exa). In particular, it includes:
     - the evaluations of one QNN on a smaller test data set of 4000 points repeated over several days 'results_clc_i_varreg_date_processed' numbered by the date and different cloud regimes 'i'. Please note, that this includes the expectations value, the values after the affine linear layer as well as the final post-processed predictions, but not the counts from the measurements. Repeated experiments are denoted with 'results_clc_i_varreg_date_2_processed'
     - the evaluation of QNN on the grid to compute the shadow model using the quantum fourier model (QFM) 'Yft_flat_...' numbered by the date.
-    - The subfolder \data_hardware\shadow contains the data for the corresponding shadow models (for the Pytorch model). It can be evaluated with the notebook 'qfm_pytorch_model_eval.ipynb'.
+- The subfolder \data_hardware\shadow contains the data for the corresponding shadow models (for the Pytorch model). It can be evaluated with the notebook 'qfm_pytorch_model_eval.ipynb'.
     
     
 - The folder '\optimal_params' contains the parameters of the QNN's with ansatzes XYZ and ZZXY for 6 features trained in a noiseless setting and with 1000 shots and variance regularization provided by L.Pastori [10.1088/3049-4753/ae4981](https://doi.org/10.1088/3049-4753/ae4981). 
@@ -71,7 +64,7 @@ For reproducibility, the training and test data used by Pastori et al. is publis
 
 The output generated on quantum hardware (Euro-Q-Exa) is also included in the subfolder '\data_hardware' for reproducibility of the results.
 
-The optimal parameters computed in the training regimes in Lorenzo et al. 2026 Mach. Learn.: Earth 2 015008 DOI [10.1088/3049-4753/ae4981](https://doi.org/10.1088/3049-4753/ae4981) are included in '\optimal_params'
+The optimal parameters computed in the training regimes in Pastori et al. 2026 Mach. Learn.: Earth 2 015008 DOI [10.1088/3049-4753/ae4981](https://doi.org/10.1088/3049-4753/ae4981) are included in '\optimal_params'
 
 
 ## Authors and acknowledgment
