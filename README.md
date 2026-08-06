@@ -6,7 +6,7 @@ It is part of the paper "Shadow models of a quantum model for cloud cover and th
 
 The code is based on the QML-based cloud cover-parameterization from Pastori et al. 2026 Mach. Learn.: Earth 2 015008 [10.1088/3049-4753/ae4981](https://doi.org/10.1088/3049-4753/ae4981), with corresponding code repository [10.5281/zenodo.21504569](https://doi.org/10.5281/zenodo.21504569). Used here, are the QNN's, functions for pre- and post-processing, as well as for data loading.
 
-
+TO BE INCLUDED: DOI of published Paper, DOI of repository
 
 # Usage
 
@@ -44,17 +44,17 @@ The following files are included:
 
 Lastly, we include the following notebooks:
 - To evaluate the QNN on the test data, for reference values to compare against the shadow models:
-    - 'ref_qml6f.ipynb' to evaluate all 4 cloud regimes, the file 'ref_qml_6fN1000'.ipynb, evaluates only the first 1000 points of each cloud regime.
-- Shadowing with a piecewise affine-linear quasi-interpolation:
+    - 'ref_qml6f.ipynb' to evaluate all 4 cloud regimes, the file 'ref_qml_6fN1000'.ipynb, evaluates only the first 1000 points of each cloud regime. The values computed here are used as reference values in Figures 2 - 7, 10 and 12
+- Shadowing with a piecewise affine-linear quasi-interpolation (cf. Section 4.1 in corresponding paper, used to generate data for Figure 2-4 )
     - 'intp_pw_linear.ipynb'
-- Shadowing with a quasi-interpolation on sparse grids: 
+- Shadowing with a quasi-interpolation on sparse grids: (cf. Appendix A.1 in corresponding Paper, Figure 12)
     - 'intp_sparse_data.ipynb' to generate and save the sparse grid and evaluate the QNN on the sparse grid
     - 'intp_sparse_shadow.ipynb' to evaluate the shadow model on the test set
-- Shadowing with the QFM using FFT:
-    - 'qfm_trunc_shadow.ipynb' to compute and evaluate the shadow model using QFM and FFT
+- Shadowing with the QFM using FFT: (to reproduce the results in Section 4.2, , used to generate data for Figure 5-10) 
+    - 'qfm_trunc_shadow.ipynb' to compute and evaluate the shadow model using QFM and FFT (this is used to generate data for Figures 5-7)
     - 'qfm_for_pytorch.ipynb' computes coefficients for a shadow model and saves it to be used in a pytorch model
     - 'qfm_pytorch_model_eval.ipynb' defines the Fourier-based shadow model as a pytorch model (for a faster evaluation of the test set)
-    - 'qfm_hardware_plots.ipynb' a function to plot the outputs of the QML models from Euro-Q-Exa
+    - 'qfm_hardware_plots.ipynb' a function to plot the outputs of the QML models from Euro-Q-Exa (this allows to reproduce the plots in Section 4.2.2, i.e., Figures 8-10; Figures 5-7 can be reproduced analogously)
 
 
 ## Data
@@ -77,7 +77,7 @@ Authors:
 The corresponding training and test data set can be found at [10.5281/zenodo.21455691](https://doi.org/10.5281/zenodo.21455691)
  It is based on the DYAMOND data set [10.1186/s40645-019-0304-z](https://doi.org/10.1186/s40645-019-0304-z), coarse-grained to R2B5 following Grundner et al. [10.1029/2023MS003763](https://doi.org/10.1029/2023MS003763).
 
-
+Contact: Hedwig Keller, hedwig.keller@dlr.de
 
 
 ## License
