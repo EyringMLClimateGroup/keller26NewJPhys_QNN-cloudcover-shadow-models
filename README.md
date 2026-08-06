@@ -43,7 +43,7 @@ The directory is structured as follows:
     
     
 - The folder '\optimal_params' contains the parameters of the QNN's with ansatzes XYZ and ZZXY for 6 features trained in a noiseless setting and with 1000 shots and variance regularization provided by L.Pastori [10.1088/3049-4753/ae4981](https://doi.org/10.1088/3049-4753/ae4981). 
-- The folder '\test_data' is empty, but should contain the test data. To run the other notebooks, the data cloud_regimes from the repository [10.5281/zenodo.21455691](https://doi.org/10.5281/zenodo.21455691) should be included, which is a a subset of the test data used in [10.5281/zenodo.21504569](https://doi.org/10.5281/zenodo.21504569) but split into four different cloud regimes.
+- To run the code, a folder '\test_data' should be created in which the data cloud_regimes from the repository [10.5281/zenodo.21455691](https://doi.org/10.5281/zenodo.21455691) are saved. This is a subset of the test data used in [10.5281/zenodo.21504569](https://doi.org/10.5281/zenodo.21504569) but split into four different cloud regimes.
 
 The following files are included:
 - the file 'cs_functions_jit.py' containes functions to compute the shadow models via the QFM using the fast Fourier transform (FFT).
