@@ -1,0 +1,1 @@
+The files from the folder '\clc_functions' are authored by Lorenzo Pastori and from the repository [10.5281/zenodo.21504569](https://doi.org/10.5281/zenodo.21504569), but included here to ensure that the repository is self-contained.
