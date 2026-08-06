@@ -40,7 +40,7 @@ def compute_fourier_coeff_fft(model_qnn_q,Oflat,Xft,shape,opt_params,linear_pre_
     #Eval cs  + for whole spectrum
     batch_size = 500
     
-    no_batches_test = int(np.floor(Yft_flat1.shape[0] / batch_size)) ###<----------!!!
+    no_batches_test = int(np.floor(Yft_flat1.shape[0] / batch_size)) 
     for kk in range(0, no_batches_test-1):
         ins_batch = Xft[kk*batch_size:(kk+1)*batch_size,:]
         outs_batch= np.array(model_qnn_q(opt_params,linear_pre_inverse(ins_batch))).T
