@@ -8,7 +8,9 @@ Link to preprint: [10.48550/arXiv.2608.20076](https://doi.org/10.48550/arXiv.260
 
 The code is based on the QML-based cloud cover-parameterization from Pastori et al. 2026 Mach. Learn.: Earth 2 015008 [10.1088/3049-4753/ae4981](https://doi.org/10.1088/3049-4753/ae4981), with corresponding code repository [10.5281/zenodo.21504569](https://doi.org/10.5281/zenodo.21504569). Used here, are the QNN's, functions for pre- and post-processing, as well as for data loading.
 
-DOI:
+DOI: 
+[![DOI](https://zenodo.org/badge/1324804884.svg)](https://zenodo.org/badge/latestdoi/1324804884)
+
 
 # Usage
 
